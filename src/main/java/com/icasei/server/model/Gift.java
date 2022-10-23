@@ -27,6 +27,9 @@ public class Gift {
         this.price = payload.getPrice();
     }
 
+    public Long getId() {
+        return id;
+    }
     public String getTitle() {
         return title;
     }
