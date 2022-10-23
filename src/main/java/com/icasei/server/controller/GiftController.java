@@ -21,7 +21,7 @@ import com.icasei.server.repository.GiftRepository;
 
 @RestController()
 @RequestMapping(value = "/gift")
-@CrossOrigin(origins = "http://127.0.0.1:5173")
+@CrossOrigin(origins = "http://localhost:3000")
 public class GiftController {
 
     @Autowired
