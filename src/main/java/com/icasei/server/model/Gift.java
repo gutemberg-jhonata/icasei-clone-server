@@ -1,23 +1,38 @@
 package com.icasei.server.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import com.icasei.server.data.GiftPayload;
 
-@Entity()
+import lombok.Data;
+
+@Entity
+@Data
 @Table(name = "gifts")
 public class Gift {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    @Column(nullable = false)
     String title;
-    String description;
+    
+    @Column(nullable = false)
     Double price;
+
+    @Lob
+    String imageBase64;
+
+    @Column(nullable = false)
     Boolean available = true;
+
+    String description;
 
     public Gift() {}
 
@@ -25,33 +40,6 @@ public class Gift {
         this.title = payload.getTitle();
         this.description = payload.getDescription();
         this.price = payload.getPrice();
-    }
-
-    public Long getId() {
-        return id;
-    }
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public Double getPrice() {
-        return price;
-    }
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-    public Boolean getAvailable() {
-        return available;
-    }
-    public void setAvailable(Boolean available) {
-        this.available = available;
+        this.imageBase64 = payload.getImageBase64();
     }
 }
