@@ -1,4 +1,4 @@
-package com.icasei.server.data;
+package icasei.clone.server.gift;
 
 import lombok.Data;
 

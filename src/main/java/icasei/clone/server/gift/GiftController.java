@@ -1,4 +1,4 @@
-package com.icasei.server.controller;
+package icasei.clone.server.gift;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.icasei.server.data.GiftPayload;
-import com.icasei.server.model.Gift;
-import com.icasei.server.repository.GiftRepository;
 
 @RestController()
 @RequestMapping(value = "/gift")

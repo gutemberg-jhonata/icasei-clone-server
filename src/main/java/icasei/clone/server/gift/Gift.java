@@ -1,4 +1,4 @@
-package com.icasei.server.model;
+package icasei.clone.server.gift;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
-
-import com.icasei.server.data.GiftPayload;
 
 import lombok.Data;
 
