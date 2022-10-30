@@ -1,8 +1,15 @@
 spring:
+    h2:
+        console:
+            enabled: false
     datasource:
-        url:
+        url: jdbc:{database}://{host}:{port}/{databasename}
         username:
         password:
+        driver-class-name:
     jpa:
         hibernate:
-            ddl-auto:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect:
